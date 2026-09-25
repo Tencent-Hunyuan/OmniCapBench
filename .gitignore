@@ -1,0 +1,44 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db
+
+# Run artifacts
+logs/
+debug/
+output/
+output_*/
+video_cache/
+*.log
+*.lock
+*.tmp
+*.bak
+*.backup_*
+
+# Benchmark data and model checkpoints are downloaded, not committed
+data/
+omnicapbench_eval/models/
+
+# Media files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.flac
+
+.ipynb_checkpoints/
+.pytest_cache/
+build/
+dist/
+*.egg-info/

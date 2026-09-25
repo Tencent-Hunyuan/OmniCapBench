@@ -1,0 +1,8 @@
+[
+  {
+    "DID": "example_video_001",
+    "video_path": "data/OmniCapBench/test/videos/ytb_2tX_148en_Y.mp4",
+    "audio_path": "",
+    "shot_time": [[0.0, 6.56], [6.56, 11.84], [11.84, 16.08]]
+  }
+]

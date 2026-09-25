@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnicapbench"
+version = "1.0.0"
+description = "OmniCapBench: a deep-structured evaluation framework for fine-grained audio-visual captioning."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [{name = "OmniCapBench Team"}]
+keywords = [
+  "benchmark",
+  "video-captioning",
+  "audio-visual",
+  "multimodal-evaluation",
+  "omnimodal",
+]
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "openai>=1.0.0",
+  "google-genai>=1.0.0",
+  "requests>=2.31.0",
+  "json-repair>=0.30.0",
+  "opencv-python>=4.8.0",
+  "scenedetect>=0.6.4",
+  "tqdm>=4.66.0",
+  "numpy>=1.23.0",
+  "huggingface-hub>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+local = [
+  "torch>=2.1.0",
+  "transformers>=4.45.0",
+]
+
+[project.urls]
+Dataset = "https://huggingface.co/datasets/OmniCapBench/OmniCapBench"
+
+[project.scripts]
+omnicap-eval-infer = "omnicapbench_eval.run_eval:main"
+omnicap-eval-metrics = "omnicapbench_eval.mtss_metrics:main"
+omnicap-eval-judge = "omnicapbench_eval.mtss_llm_judge:main"
+omnicap-eval-report = "omnicapbench_eval.report_tables:main"
+omnicap-generate = "omnicapbench_pipeline.run:main"
+
+[tool.setuptools.packages.find]
+include = ["omnicapbench_pipeline*", "omnicapbench_eval*"]
+
+[tool.setuptools.package-data]
+omnicapbench_pipeline = ["mtss_generate_prompts/*.txt"]
+omnicapbench_eval = ["mtss_generate_prompts/*.txt"]

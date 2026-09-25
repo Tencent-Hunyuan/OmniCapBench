@@ -1,0 +1,10 @@
+openai>=1.0.0
+google-genai>=1.0.0
+requests>=2.31.0
+json-repair>=0.30.0
+opencv-python>=4.8.0
+scenedetect>=0.6.4
+tqdm>=4.66.0
+numpy>=1.23.0
+huggingface-hub>=0.20.0
+pytest>=8.0.0
