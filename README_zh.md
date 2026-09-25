@@ -158,6 +158,6 @@ python -m omnicapbench_pipeline.run \
 
 ## 许可协议
 
-本仓库中的评测代码以 **MIT License** 发布，见 [LICENSE](LICENSE)。
+本仓库中的评测代码以 **Apache License 2.0** 发布，见 [LICENSE](LICENSE) 与 [NOTICE](NOTICE)。
 
 评测视频单独分发，聚合自多个上游数据集，各自有不同的许可与再分发条款。再分发或商用前请先核对来源数据集的条款，并把数据视作可能包含人脸、语音等可识别内容的真实世界视频。

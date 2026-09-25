@@ -156,6 +156,6 @@ Run the offline tests with `pytest`; they touch only local files and make no API
 
 ## License
 
-The evaluation code in this repository is released under the **MIT License**; see [LICENSE](LICENSE).
+The evaluation code in this repository is released under the **Apache License 2.0**; see [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 The benchmark videos are distributed separately and are aggregated from multiple upstream collections, each with its own license and redistribution terms. Review the terms of the source collections before redistribution or commercial use, and treat the data as real-world video that may contain faces, speech, and other identifying content.
