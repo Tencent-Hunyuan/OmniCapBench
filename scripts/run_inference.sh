@@ -5,7 +5,7 @@
 #   bash scripts/run_inference.sh MODEL [INPUT_JSONL] [OUTPUT_DIR]
 #
 # Example:
-#   bash scripts/run_inference.sh gemini_25 data/OmniCapBench/eval.jsonl output/eval
+#   bash scripts/run_inference.sh gemini_25 my_benchmark/eval.jsonl output/eval
 #
 # Every parameter is passed explicitly on the command line so a run can be
 # reproduced from the shell history alone.

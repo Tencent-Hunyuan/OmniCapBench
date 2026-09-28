@@ -10,7 +10,7 @@
 #          convert-only convert a free-form captioner output into MTSS, then stop
 #
 # Example:
-#   bash scripts/eval_all_metrics.sh all data/OmniCapBench/eval.jsonl output/eval/gemini_25
+#   bash scripts/eval_all_metrics.sh all my_benchmark/eval.jsonl output/eval/gemini_25
 #
 # The judge endpoint is configured through these variables, which are forwarded
 # explicitly to each Python entry point rather than being read from inside the

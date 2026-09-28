@@ -28,8 +28,8 @@ def resolve_media_path(video_item: dict) -> str:
 
     ``video_path`` is the canonical record identity used to join predictions
     against the ground truth, so it is never rewritten. When the annotations use
-    paths relative to a downloaded dataset root, ``load_input_data`` stores the
-    resolved location in ``media_path`` instead.
+    paths relative to a media root, ``load_input_data`` stores the resolved
+    location in ``media_path`` instead.
     """
     return video_item.get("media_path") or video_item.get("video_path", "")
 

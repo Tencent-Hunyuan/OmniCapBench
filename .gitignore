@@ -23,7 +23,7 @@ video_cache/
 *.bak
 *.backup_*
 
-# Benchmark data and model checkpoints are downloaded, not committed
+# Local evaluation data and model checkpoints are never committed
 data/
 omnicapbench_eval/models/
 

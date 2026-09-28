@@ -15,10 +15,9 @@ limitations under the License.
 
 --------------------------------------------------------------------------------
 
-This License applies to the source code in this repository only.
+This License applies to the source code in this repository only. No video data
+or annotations are distributed here.
 
-The OmniCapBench benchmark videos are distributed separately at
-https://huggingface.co/datasets/OmniCapBench/OmniCapBench and are aggregated
-from multiple upstream collections, each carrying its own license and
-redistribution terms. Review the terms of the source collections before
-redistribution or commercial use.
+Evaluation sets built with this code may draw on third-party video collections,
+each carrying its own license and redistribution terms. Review the terms of
+those sources before redistribution or commercial use.

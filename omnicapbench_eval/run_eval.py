@@ -324,8 +324,7 @@ def main():
     parser.add_argument("--input", type=str, default=config.INPUT_JSONL,
                         help="Input JSONL file path")
     parser.add_argument("--video-root", type=str, default=config.VIDEO_ROOT,
-                        help="Directory that relative video_path entries are resolved against "
-                             "(e.g. the test/ directory of the downloaded benchmark)")
+                        help="Media directory that relative video_path entries are resolved against")
     parser.add_argument("--workers", type=int, default=config.NUM_WORKERS,
                         help="Number of parallel workers")
     parser.add_argument("--start", type=int, default=None,

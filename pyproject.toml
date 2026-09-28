@@ -42,9 +42,6 @@ local = [
   "transformers>=4.45.0",
 ]
 
-[project.urls]
-Dataset = "https://huggingface.co/datasets/OmniCapBench/OmniCapBench"
-
 [project.scripts]
 omnicap-eval-infer = "omnicapbench_eval.run_eval:main"
 omnicap-eval-metrics = "omnicapbench_eval.mtss_metrics:main"
