@@ -1,16 +1,35 @@
+<div align="center">
+
 # OmniCapBench：面向细粒度音视频描述的深层结构化评测框架
 
-[📖 指标文档](docs/METRICS_zh.md) · [English](README.md)
+</div>
+
+<div align="center">
+  <a href="https://01yzzyu.github.io/OmniCapBench/" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Website-OmniCapBench-1a73e8.svg" height=22px></a>
+  <a href="https://arxiv.org/abs/2610.12458" target="_blank"><img src="https://img.shields.io/badge/Paper-b5212f.svg?logo=arxiv" height=22px></a>
+  <a href="https://openreview.net/forum?id=WgEmdr50mC" target="_blank"><img src="https://img.shields.io/badge/OpenReview-NeurIPS%202026-8c1b13.svg" height=22px></a>
+  <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-ffbd45.svg" height=22px></a>
+  <a href="LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-Apache%202.0-3f9b35.svg" height=22px></a>
+</div>
+
+<p align="center">
+📊 完整榜单见<a href="https://01yzzyu.github.io/OmniCapBench/">项目主页</a> · 🤗 数据在 <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench">Hugging Face</a> · 📖 <a href="docs/METRICS_zh.md">指标文档</a> · <a href="README.md">English</a>
+</p>
 
 > 论文标题：*OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning*
 
 ## 最新动态
 
-* **[2026/09]** 🎉 **OmniCapBench** 正式开源：包含构建深层结构化评测集的标注管线，以及完整的打分工具链。
+- **[2026/10]** 📄 论文已上线 arXiv：[arXiv:2610.12458](https://arxiv.org/abs/2610.12458)；[项目主页](https://01yzzyu.github.io/OmniCapBench/)同步发布，包含九个全模态 MLLM 的完整榜单。
+- **[2026/10]** 🤗 评测数据托管于 [Hugging Face](https://huggingface.co/datasets/OmniCapBench/OmniCapBench)——786 个密集标注视频，含 5,818 个实体引用、11,419 个镜头、39,160 个子镜头与 6,537 个音频事件。
+- **[2026/09]** 🎉 **OmniCapBench** 被 **NeurIPS 2026**（Evaluations & Datasets Track）接收。
+- **[2026/09]** 🧩 **OmniCapBench** 正式开源：包含构建深层结构化评测集的标注管线，以及完整的打分工具链。
 
 ## 目录
 
+* [最新动态](#最新动态)
 * [简介](#简介)
+* [资源](#资源)
 * [评测单元](#评测单元)
 * [指标](#指标)
 * [安装](#安装)
@@ -35,6 +54,26 @@ OmniCapBench 通过把打分算子拆成两个阶段，同时保住完整覆盖�
 由于每个分数都能追溯到具体单元，失败变得可诊断：未定义的标识符、时间重叠不足、声音挂到错误镜头、幻觉属性，都被分别计入，而不是被平均掉。
 
 论文把这套框架应用在 786 个密集标注视频上（12.8 小时，20 个一级类别与 125 个二级子类别，共产出 5,818 个引用、11,419 个镜头、39,160 个子镜头、6,537 个事件）。本仓库包含的正是生成那批标注的管线与为其打分的指标，因此同一套协议可以在任意视频集合上复现。
+
+## 资源
+
+| 资源            | 链接                                                            |
+| --------------- | --------------------------------------------------------------- |
+| 项目主页与榜单  | [01yzzyu.github.io/OmniCapBench/](https://01yzzyu.github.io/OmniCapBench/)                            |
+| 论文（arXiv）   | [arXiv:2610.12458](https://arxiv.org/abs/2610.12458)                                        |
+| 论文（OpenReview） | [NeurIPS 2026, Evaluations & Datasets Track](https://openreview.net/forum?id=WgEmdr50mC)            |
+| 评测数据        | 🤗 [OmniCapBench/OmniCapBench](https://huggingface.co/datasets/OmniCapBench/OmniCapBench)                             |
+| 代码            | [Tencent-Hunyuan/OmniCapBench](https://github.com/Tencent-Hunyuan/OmniCapBench)                           |
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="OmniCapBench/OmniCapBench",
+    repo_type="dataset",
+    local_dir="./data/omnicapbench",
+)
+```
 
 ## 评测单元
 
@@ -71,7 +110,7 @@ OmniCapBench 通过把打分算子拆成两个阶段，同时保住完整覆盖�
 需要 Python 3.8+ 与 FFmpeg。
 
 ```bash
-git clone <仓库地址>
+git clone https://github.com/Tencent-Hunyuan/OmniCapBench.git
 cd OmniCapBench
 
 python -m venv .venv && source .venv/bin/activate
@@ -158,11 +197,21 @@ python -m omnicapbench_eval.report_tables \
 
 ## 引用
 
+如果 OmniCapBench 对你的研究有帮助，欢迎引用：
+
 ```bibtex
-@misc{omnicapbench2026,
-  title  = {OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning},
-  author = {OmniCapBench Team},
-  year   = {2026}
+@inproceedings{yang2026omnicapbench,
+  title         = {OmniCapBench: A Deep-Structured Evaluation Framework for
+                   Fine-Grained Audio-Visual Captioning},
+  author        = {Yang, Zhongyu and Tao, Jiale and Chen, Ruitao and Yang, Zuhao and
+                   Yuan, Yingfang and Zhao, Xueliang and Auden and Wang, Kai and
+                   Shao, Shuai and Wang, Biao and Yves, Steve and Lu, Qinglin},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS),
+                   Evaluations and Datasets Track},
+  year          = {2026},
+  eprint        = {2610.12458},
+  archivePrefix = {arXiv},
+  url           = {https://openreview.net/forum?id=WgEmdr50mC}
 }
 ```
 

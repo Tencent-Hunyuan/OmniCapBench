@@ -1,14 +1,33 @@
+<div align="center">
+
 # OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning
 
-[📖 Metrics Reference](docs/METRICS.md) · [中文说明](README_zh.md)
+</div>
+
+<div align="center">
+  <a href="https://01yzzyu.github.io/OmniCapBench/" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Website-OmniCapBench-1a73e8.svg" height=22px></a>
+  <a href="https://arxiv.org/abs/2610.12458" target="_blank"><img src="https://img.shields.io/badge/Paper-b5212f.svg?logo=arxiv" height=22px></a>
+  <a href="https://openreview.net/forum?id=WgEmdr50mC" target="_blank"><img src="https://img.shields.io/badge/OpenReview-NeurIPS%202026-8c1b13.svg" height=22px></a>
+  <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Dataset-ffbd45.svg" height=22px></a>
+  <a href="LICENSE" target="_blank"><img src="https://img.shields.io/badge/License-Apache%202.0-3f9b35.svg" height=22px></a>
+</div>
+
+<p align="center">
+📊 Full leaderboard on the <a href="https://01yzzyu.github.io/OmniCapBench/">project website</a> · 🤗 Data on <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench">Hugging Face</a> · 📖 <a href="docs/METRICS.md">Metrics reference</a> · <a href="README_zh.md">中文说明</a>
+</p>
 
 ## News
 
-* **[2026/09]** 🎉 **OmniCapBench** is now open-source: the annotation pipeline for building a deep-structured evaluation set, plus the full scoring toolkit.
+- **[2026/10]** 📄 The paper is on arXiv: [arXiv:2610.12458](https://arxiv.org/abs/2610.12458). The [project website](https://01yzzyu.github.io/OmniCapBench/) is live with the full leaderboard across nine omnimodal MLLMs.
+- **[2026/10]** 🤗 The benchmark data is hosted on [Hugging Face](https://huggingface.co/datasets/OmniCapBench/OmniCapBench) — 786 densely annotated videos with 5,818 references, 11,419 shots, 39,160 subshots and 6,537 audio events.
+- **[2026/09]** 🎉 **OmniCapBench** was accepted to **NeurIPS 2026** (Evaluations & Datasets Track).
+- **[2026/09]** 🧩 **OmniCapBench** is now open-source: the annotation pipeline for building a deep-structured evaluation set, plus the full scoring toolkit.
 
 ## Contents
 
+* [News](#news)
 * [Introduction](#introduction)
+* [Resources](#resources)
 * [Evaluation Units](#evaluation-units)
 * [Metrics](#metrics)
 * [Installation](#installation)
@@ -33,6 +52,26 @@ OmniCapBench keeps full coverage *and* exact localization by splitting the scori
 Because every score traces back to a specific unit, failures become diagnosable: an undefined identifier, a weak temporal overlap, a sound attached to the wrong shot, or a hallucinated attribute are each counted separately rather than averaged away.
 
 The paper applies this framework to 786 densely annotated videos (12.8 hours, 20 level-1 and 125 level-2 categories, yielding 5,818 references, 11,419 shots, 39,160 subshots, and 6,537 events). This repository contains the pipeline that produced those annotations and the metrics that scored them, so the same protocol can be reproduced on any video collection.
+
+## Resources
+
+| Resource                       | Link                                                                              |
+| ------------------------------ | --------------------------------------------------------------------------------- |
+| Project website & leaderboard  | [01yzzyu.github.io/OmniCapBench/](https://01yzzyu.github.io/OmniCapBench/)                                              |
+| Paper (arXiv)                  | [arXiv:2610.12458](https://arxiv.org/abs/2610.12458)                                                           |
+| Paper (OpenReview)             | [NeurIPS 2026, Evaluations & Datasets Track](https://openreview.net/forum?id=WgEmdr50mC)                                  |
+| Benchmark data                 | 🤗 [OmniCapBench/OmniCapBench](https://huggingface.co/datasets/OmniCapBench/OmniCapBench)                                               |
+| Code                           | [Tencent-Hunyuan/OmniCapBench](https://github.com/Tencent-Hunyuan/OmniCapBench)                                              |
+
+```python
+from huggingface_hub import snapshot_download
+
+snapshot_download(
+    repo_id="OmniCapBench/OmniCapBench",
+    repo_type="dataset",
+    local_dir="./data/omnicapbench",
+)
+```
 
 ## Evaluation Units
 
@@ -69,7 +108,7 @@ Exact formulations, matching thresholds, and output field names: **[docs/METRICS
 Python 3.8+ and FFmpeg are required.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Tencent-Hunyuan/OmniCapBench.git
 cd OmniCapBench
 
 python -m venv .venv && source .venv/bin/activate
@@ -156,11 +195,21 @@ Run the offline tests with `pytest`; they touch only local files and make no API
 
 ## Citation
 
+If you find OmniCapBench useful in your research, please cite our work:
+
 ```bibtex
-@misc{omnicapbench2026,
-  title  = {OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning},
-  author = {OmniCapBench Team},
-  year   = {2026}
+@inproceedings{yang2026omnicapbench,
+  title         = {OmniCapBench: A Deep-Structured Evaluation Framework for
+                   Fine-Grained Audio-Visual Captioning},
+  author        = {Yang, Zhongyu and Tao, Jiale and Chen, Ruitao and Yang, Zuhao and
+                   Yuan, Yingfang and Zhao, Xueliang and Auden and Wang, Kai and
+                   Shao, Shuai and Wang, Biao and Yves, Steve and Lu, Qinglin},
+  booktitle     = {Advances in Neural Information Processing Systems (NeurIPS),
+                   Evaluations and Datasets Track},
+  year          = {2026},
+  eprint        = {2610.12458},
+  archivePrefix = {arXiv},
+  url           = {https://openreview.net/forum?id=WgEmdr50mC}
 }
 ```
 
