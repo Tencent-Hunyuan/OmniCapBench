@@ -1,8 +1,13 @@
-<div align="center">
+<p align="left">
+    <a href="README_zh.md">中文</a>&nbsp;｜&nbsp;English
+</p>
+<br>
 
-# OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning
+<p align="center">
+ <img src="assets/logo-en.png" alt="Tencent Hy" width="400"/> <br>
+</p>
 
-</div>
+<h1 align="center">OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning</h1>
 
 <div align="center">
   <a href="https://01yzzyu.github.io/OmniCapBench/" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Website-OmniCapBench-1a73e8.svg" height=22px></a>
@@ -13,7 +18,7 @@
 </div>
 
 <p align="center">
-📊 Full leaderboard on the <a href="https://01yzzyu.github.io/OmniCapBench/">project website</a> · 🤗 Data on <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench">Hugging Face</a> · 📖 <a href="docs/METRICS.md">Metrics reference</a> · <a href="README_zh.md">中文说明</a>
+📊 Full leaderboard on the <a href="https://01yzzyu.github.io/OmniCapBench/">project website</a> · 🤗 Data on <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench">Hugging Face</a> · 📖 <a href="docs/METRICS.md">Metrics reference</a>
 </p>
 
 ## News

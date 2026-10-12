@@ -1,8 +1,13 @@
-<div align="center">
+<p align="left">
+    <a href="README.md">English</a>&nbsp;｜&nbsp;中文
+</p>
+<br>
 
-# OmniCapBench：面向细粒度音视频描述的深层结构化评测框架
+<p align="center">
+ <img src="assets/logo-zh.png" alt="腾讯混元" width="400"/> <br>
+</p>
 
-</div>
+<h1 align="center">OmniCapBench：面向细粒度音视频描述的深层结构化评测框架</h1>
 
 <div align="center">
   <a href="https://01yzzyu.github.io/OmniCapBench/" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Website-OmniCapBench-1a73e8.svg" height=22px></a>
@@ -13,7 +18,7 @@
 </div>
 
 <p align="center">
-📊 完整榜单见<a href="https://01yzzyu.github.io/OmniCapBench/">项目主页</a> · 🤗 数据在 <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench">Hugging Face</a> · 📖 <a href="docs/METRICS_zh.md">指标文档</a> · <a href="README.md">English</a>
+📊 完整榜单见<a href="https://01yzzyu.github.io/OmniCapBench/">项目主页</a> · 🤗 数据在 <a href="https://huggingface.co/datasets/OmniCapBench/OmniCapBench">Hugging Face</a> · 📖 <a href="docs/METRICS_zh.md">指标文档</a>
 </p>
 
 > 论文标题：*OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning*
