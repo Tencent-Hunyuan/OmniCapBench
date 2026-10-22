@@ -3,9 +3,6 @@
 </p>
 <br>
 
-<p align="center">
- <img src="assets/logo-zh.png" alt="腾讯混元" width="400"/> <br>
-</p>
 
 <h1 align="center">OmniCapBench：面向细粒度音视频描述的深层结构化评测框架</h1>
 
