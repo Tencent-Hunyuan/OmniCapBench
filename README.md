@@ -3,9 +3,6 @@
 </p>
 <br>
 
-<p align="center">
- <img src="assets/logo-en.png" alt="Tencent Hy" width="400"/> <br>
-</p>
 
 <h1 align="center">OmniCapBench: A Deep-Structured Evaluation Framework for Fine-Grained Audio-Visual Captioning</h1>
 
